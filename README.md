@@ -9,5 +9,5 @@ The filtering logic was attained from the node-beacon-scanner project. To better
 Logging beacons/data to Firebase database, hence, third a final npm module.
 
 To run service automatically on raspberry pi, copy tilt.service file to /etc/systemd/system folder on pi. Then run the following:
-* sudo systemctl enable timestamp.service (registers new service with os boot logic)
-* sudo systemctl start timestamp.service (manually starts service if not wanting to reboot right away)
+* sudo systemctl enable tilt.service (registers new service with os boot logic)
+* sudo systemctl start tilt.service (manually starts service if not wanting to reboot right away)
