@@ -6,7 +6,6 @@ const database = require('./lib/database')
 
 let scanner = undefined
 let stopped = false
-debugger
 
 if (process.platform === 'darwin') {
     scanner = new Tilt(noble_mac)

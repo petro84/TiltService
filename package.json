@@ -4,12 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:dev": "webpack"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dateformat": "^3.0.3",
     "firebase-admin": "^7.2.0",
     "noble": "^1.9.1",
     "noble-mac": "git+https://github.com/Timeular/noble-mac.git"
