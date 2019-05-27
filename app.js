@@ -6,12 +6,17 @@ const database = require('./lib/database')
 
 let scanner = undefined
 let stopped = false
+let interval = undefined
 
 if (process.platform === 'darwin') {
     scanner = new Tilt(noble_mac)
 } else {
     scanner = new Tilt(noble)
 }
+
+database.ref('tilt/Settings').on('value',(snapshot) => {
+    interval = snapshot.val()
+})
 
 scanner.startScan()
     .then(() => console.log('Scanning...'))
@@ -30,4 +35,4 @@ setInterval(() => {
             .then(() => stopped = false)
             .catch((e) => console.log(e))
     }
-}, 60000)
+}, interval)
