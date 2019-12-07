@@ -1,17 +1,17 @@
 {
   "name": "tilt",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "sudo node app.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "firebase-admin": "^7.2.0",
-    "noble": "^1.9.1",
-    "noble-mac": "git+https://github.com/Timeular/noble-mac.git"
+    "@abandonware/noble": "^1.9.2-5",
+    "express": "^4.17.1",
+    "firebase-admin": "^8.8.0"
   }
 }
