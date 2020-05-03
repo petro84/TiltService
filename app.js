@@ -1,22 +1,15 @@
-const noble_mac = require('noble-mac')
-const noble = require('noble')
+const noble = require('@abandonware/noble')
 
 const Tilt = require('./lib/tilt-scanner')
 const database = require('./lib/database')
 
-let scanner = undefined
+let scanner = new Tilt(noble)
 let stopped = false
-let interval = undefined
+let interval = 300000
 
-if (process.platform === 'darwin') {
-    scanner = new Tilt(noble_mac)
-} else {
-    scanner = new Tilt(noble)
-}
-
-database.ref('tilt/Settings').on('value',(snapshot) => {
-    interval = snapshot.val()
-})
+// database.ref('tilt/Settings').on('value',(snapshot) => {
+//     interval = snapshot.val()
+// })
 
 scanner.startScan()
     .then(() => console.log('Scanning...'))

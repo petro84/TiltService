@@ -10,8 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "firebase-admin": "^7.2.0",
-    "noble": "^1.9.1",
-    "noble-mac": "git+https://github.com/Timeular/noble-mac.git"
+    "@abandonware/noble": "^1.9.2-8",
+    "express": "^4.17.1",
+    "firebase-admin": "^8.11.0"
   }
 }
