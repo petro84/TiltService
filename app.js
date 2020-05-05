@@ -5,11 +5,7 @@ const database = require('./lib/database')
 
 let scanner = new Tilt(noble)
 let stopped = false
-let interval = 300000
-
-// database.ref('tilt/Settings').on('value',(snapshot) => {
-//     interval = snapshot.val()
-// })
+let interval = 1800000
 
 scanner.startScan()
     .then(() => console.log('Scanning...'))
