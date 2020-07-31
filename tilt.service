@@ -3,8 +3,8 @@ Description=Tilt Bluetooth Service
 After=network.target
 
 [Service]
-WorkingDirectory=/home/pi/Desktop/Tilt
-ExecStart=/usr/bin/npm start
+WorkingDirectory=/home/pi/TiltService
+ExecStart=/usr/local/bin/npm start
 Restart=on-failure
 User=pi
 
