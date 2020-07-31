@@ -1,10 +1,9 @@
 # TiltService
 
-Service is intended to run on raspberry pi device(s) as a startup service. Two main routes exist to be called from front-end UI to start and stop bluetooth scanning.
+Service is intended to run on raspberry pi device(s) as a startup service. It uses a default listener to detect changes to 'settings' path and a default function to save data to a unique path 'tilt/{beer name}/beacons'.
 
 Modules used:
 @abandonware/noble
-express
 firebase-admin
 
 The filtering logic was attained from the node-beacon-scanner project. To better understand what it was doing, I rewrote it to satisfy my needs (i.e. only grab certain pieces of info and not everything related to the beacon)
