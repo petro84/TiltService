@@ -8,17 +8,16 @@ let stopped = true
 let docName = undefined
 
 // listen for changes in database
-database.ref('tilt/settings').on('value', (snapshot) => {
+database.ref('settings').on('value', (snapshot) => {
     processData(snapshot.val());
 })
 
-const processData = ({interval, name, active}) => {
+const processData = ({interval, flavor, active}) => {
     // Stop Scanning
     clearInterval(intervals)
     intervals = undefined
 
-    // Setup new document in database (i.e. tilt/name/beacons)
-    docName = (name == '' ? undefined : `tilt/beacons/${name}`)
+    docName = flavor
 
     // Start scanning if active (in milliseconds)
     if (active && docName) {
